@@ -1,6 +1,6 @@
 /**Task 1. An array of objects is given. Display back an array of users's balances which are more than $2000 and calculate their summ */
 
-const users = [
+let users = [
     {
         "index": 0,
         "isActive": true,
