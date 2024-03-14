@@ -60,8 +60,11 @@ let users = [
 // Filter users with balances more than $2000
 const filteredUsers = users.filter(user => parseFloat(user.balance.replace(/[^\d.]/g, '')) > 2000);
 
-// Display the array of balances
-console.log("Balances more than $2000:", filteredUsers.map(user => user.balance));
+// Extract telephone numbers of users with balances more than $2000
+const telephoneNumbers = filteredUsers.map(user => user.phone);
+
+// Display the array of telephone numbers
+console.log("Telephone numbers of users with balances more than $2000:", telephoneNumbers);
 
 // Calculate the sum of balances
 const sumOfBalances = filteredUsers.reduce((sum, user) => sum + parseFloat(user.balance.replace(/[^\d.]/g, '')), 0);
